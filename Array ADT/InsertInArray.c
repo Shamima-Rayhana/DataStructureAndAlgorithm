@@ -8,24 +8,6 @@ struct array
     int length;
 };
 
-/*void insert(struct array arr)
-{
-    int index, value;
-    printf("Enter the Index where want to insert \n");
-    scanf("%d",&index);
-        printf("\n");
-    printf("Enter the Value what want to insert \n");
-    scanf("%d",&value);
-        printf("\n");
-
-    for(i=arr.length;i>index;i--)
-    {
-        arr.A[i]=arr.A[i-1];
-    }
-    arr.A[index]=value;
-    arr.length++;
-    printf("\n");
-}*/
 
 void Display(struct array arr)
 {
@@ -35,7 +17,7 @@ void Display(struct array arr)
     printf("Array length = %d ", arr.length);
     printf("\n");
     printf("Array elements are \n");
-    for(i=0;i<arr.length;i++)
+    for(i=0; i<arr.length; i++)
     {
         printf("%d ", arr.A[i]);
     }
@@ -44,25 +26,29 @@ void Display(struct array arr)
 
 int main()
 {
-    struct array arr={{5,10,15,20,25},20,5};
+    struct array arr= {{5,10,15,20,25},20,5};
 
     Display(arr);
 
     int index, value,i;
     printf("Enter the Index where want to insert \n");
     scanf("%d",&index);
-        printf("\n");
+    printf("\n");
     printf("Enter the Value what want to insert \n");
     scanf("%d",&value);
-        printf("\n");
+    printf("\n\n");
 
-    for(i=arr.length;i>index;i--)
+    if(index>=0 && index<=arr.length)
     {
-        arr.A[i]=arr.A[i-1];
+        for(i=arr.length; i>index; i--)
+        {
+            arr.A[i]=arr.A[i-1];
+        }
+        arr.A[index]=value;
+        arr.length++;
+
     }
-    arr.A[index]=value;
-    arr.length++;
-    printf("\n");
+
 
 
     Display(arr);
