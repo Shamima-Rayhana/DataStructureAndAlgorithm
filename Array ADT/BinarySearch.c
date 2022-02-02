@@ -28,7 +28,7 @@ int BinarySearch(struct array arr, int key)
 {
     int l=0;
     int h=arr.length-1;
-    int mid= (l+h)/2;
+    int mid;
     while(l<=h)
     {
         mid=(l+h)/2;
