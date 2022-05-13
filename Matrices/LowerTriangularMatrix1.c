@@ -3,7 +3,7 @@
 
 
 /* Shamima Rayhana Rumi
-   Date:15-04-2022
+   Date:14-05-2022
    Language: C
    Content: Lower triangular matrix using row major formula
 */
